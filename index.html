@@ -327,43 +327,58 @@
   <!-- professional typing effect – no icons, only roles -->
   <script>
     (function() {
-      const roles = [
-        "WordPress Custom Developer",
-        "Linux Ubuntu Server Engineer",
-        "Docker & Cloud Deployment",
-        "Nextcloud Administrator",
-        "PHP Backend Architect",
-        "WooCommerce Expert",
-        "ERP & Automation Specialist",
-        "Self‑hosting & Security Advocate"
-      ];
+  const roles = [
+    "WordPress Custom Developer",
+    "Linux Ubuntu Server Engineer",
+    "Docker & Cloud Deployment",
+    "Nextcloud Administrator",
+    "PHP Backend Architect",
+    "WooCommerce Expert",
+    "ERP & Automation Specialist",
+    "Self‑hosting & Security Advocate"
+  ];
 
-      let i = 0, j = 0, isDeleting = false;
-      const el = document.getElementById('typing');
+  let i = 0;
+  let j = 0;
+  let isDeleting = false;
+  let currentText = '';
+  const el = document.getElementById('typing');
 
-      function type() {
-        if (!el) return;
+  function type() {
+    if (!el) return;
 
-        if (!isDeleting && j <= roles[i].length) {
-          el.innerHTML = roles[i].substring(0, j++);
-        } else if (isDeleting && j >= 0) {
-          el.innerHTML = roles[i].substring(0, j--);
-        }
+    if (isDeleting) {
+      // Deleting: remove one character
+      currentText = roles[i].substring(0, j - 1);
+      j--;
+    } else {
+      // Typing: add one character
+      currentText = roles[i].substring(0, j + 1);
+      j++;
+    }
 
-        if (j === roles[i].length) {
-          isDeleting = true;
-          setTimeout(type, 1400);
-          return;
-        }
-        if (isDeleting && j === 0) {
-          isDeleting = false;
-          i = (i + 1) % roles.length;
-        }
+    el.innerHTML = currentText;
 
-        setTimeout(type, isDeleting ? 45 : 80);
-      }
-      type();
-    })();
+    if (!isDeleting && j === roles[i].length) {
+      // Full word typed - wait a bit, then start deleting
+      isDeleting = true;
+      setTimeout(type, 1500); // Pause before deleting
+      return;
+    } else if (isDeleting && j === 0) {
+      // Fully deleted - move to next word
+      isDeleting = false;
+      i = (i + 1) % roles.length;
+      setTimeout(type, 300); // Short pause before typing next word
+      return;
+    }
+
+    // Continue typing or deleting
+    const speed = isDeleting ? 50 : 90;
+    setTimeout(type, speed);
+  }
+
+  type();
+})();
   </script>
 
   <!-- structured data (hidden) -->

@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vashudev Vishwas – WordPress plugin & cloud engineer</title>
+  <title>Vashudev Vishwas · plugin & cloud engineer</title>
   <meta name="description" content="Vashudev Vishwas: 3+ years building WordPress plugins, ERP, WooCommerce, Linux Ubuntu, Docker, Nextcloud. Clean architecture, performance, automation.">
   <meta name="keywords" content="Vashudev Vishwas, WordPress Plugin Developer, PHP, Linux Ubuntu, Docker, Nextcloud, WooCommerce, Cloud Engineer">
-  <meta name="author" content="Vashudev Vishwas">
-  <meta name="robots" content="index, follow">
-  <!-- Open Graph minimal -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Vashudev Vishwas – plugin dev & cloud">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vashudev.github.io">
+  <meta property="og:url" content="https://vashudev.dev">
+  <!-- smooth, professional 2025 feel — crisp, airy, with subtle depth -->
   <style>
-    /* ----- 2050 inspired – pure minimalism, soft contrast, airy ----- */
     * {
       margin: 0;
       padding: 0;
@@ -21,243 +19,255 @@
     }
 
     body {
-      background-color: #f3f5f8;   /* quiet silver background */
-      color: #1b2b40;               /* deep ink but soft */
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f5f7fb;
+      color: #1d2c3f;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
       line-height: 1.5;
       font-weight: 400;
       -webkit-font-smoothing: antialiased;
     }
 
+    /* import Inter for a polished, modern look */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap');
+
     .container {
-      max-width: 1120px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 4rem 2rem;
+      padding: 3.5rem 2rem;
     }
 
-    /* typography – pure, no gradient, no heavy decoration */
+    /* professional name — strong but calm */
     h1 {
       font-size: 4rem;
-      font-weight: 500;
-      letter-spacing: -0.02em;
-      color: #0e2237;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      color: #0a1a2b;
       line-height: 1.1;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.3rem;
     }
 
+    /* typing row — subtle and smart */
     .typing-row {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: 350;
-      color: #3a5670;
-      min-height: 4rem;
-      margin: 0.5rem 0 1.8rem 0;
-      border-bottom: 1px solid #cad5e0;
+      color: #2c4d6e;
+      min-height: 4.5rem;
+      margin: 0.2rem 0 1.5rem 0;
+      border-bottom: 1px solid rgba(0,30,60,0.12);
       padding-bottom: 1.2rem;
       width: fit-content;
       max-width: 100%;
     }
 
+    #typing::after {
+      content: '|';
+      animation: blink 1s step-end infinite;
+      margin-left: 4px;
+      font-weight: 300;
+      color: #4b6f8f;
+    }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+
+    /* crisp description */
     .lead-description {
-      font-size: 1.3rem;
-      color: #1f344a;
-      background: transparent;
-      padding: 0 0 1.8rem 0;
-      margin: 1.5rem 0 2.5rem 0;
-      border-bottom: 1px solid #d0dceb;
-      max-width: 920px;
-      font-weight: 350;
-      letter-spacing: 0.01em;
+      font-size: 1.35rem;
+      color: #1f3a57;
+      background: #eef2f7;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0 2.5rem 0;
+      border-radius: 28px;
+      max-width: 980px;
+      font-weight: 380;
+      border: 1px solid #d9e2ef;
+      box-shadow: 0 6px 12px -8px rgba(0,32,64,0.08);
     }
 
-    /* section headers – quiet & structured */
+    /* section headers — refined, with subtle overline */
     .section-title {
       font-size: 2rem;
-      font-weight: 430;
-      color: #142b3c;
-      margin: 4.5rem 0 2rem 0;
-      border-bottom: 1px solid #bcc9d8;
-      padding-bottom: 0.6rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+      font-weight: 500;
+      color: #103247;
+      margin: 4rem 0 2.2rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .section-title::before {
+      content: '';
+      width: 6px;
+      height: 32px;
+      background: #4070a0;
+      display: inline-block;
+      border-radius: 8px;
     }
 
-    /* core expertise – minimal cards with very light border */
+    /* core expertise — clean cards with soft radius & subtle hover */
     .grid-expertise {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 2rem 2rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
     }
 
     .expert-card {
-      background: #ffffffd9;         /* barely there white */
-      backdrop-filter: none;
-      border: 1px solid #e2e9f2;
-      border-radius: 0px;            /* sharp – 2050 no roundness */
+      background: #ffffff;
+      border: 1px solid #e2eaf5;
+      border-radius: 24px;
       padding: 2rem 1.8rem;
-      transition: border 0.15s ease;
-      box-shadow: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 18px -10px rgba(18, 45, 70, 0.08);
     }
 
     .expert-card:hover {
-      border: 1px solid #7f9aba;     /* only border changes */
-      background: white;
+      border-color: #9bb5d4;
+      box-shadow: 0 18px 28px -14px rgba(28, 65, 102, 0.18);
+      transform: translateY(-3px);
     }
 
     .expert-card h3 {
-      font-size: 1.6rem;
-      font-weight: 440;
-      color: #1a334b;
+      font-size: 1.7rem;
+      font-weight: 520;
+      color: #17334d;
       margin-bottom: 1rem;
-      border-left: none;
-      padding-left: 0;
+      border-left: 4px solid #4070a0;
+      padding-left: 1rem;
     }
 
     .expert-card p {
-      color: #2e425b;
+      color: #2e4a68;
       font-size: 1.05rem;
       line-height: 1.5;
-      font-weight: 350;
+      font-weight: 380;
     }
 
-    /* project cards – extremely light, border-only interaction */
+    /* project cards — spacious, border subtle, clean */
     .project-list {
       display: flex;
       flex-direction: column;
-      gap: 0.1rem;   /* seamless separation */
+      gap: 1.5rem;
     }
 
     .project-card {
       background: #ffffff;
-      border: 1px solid #e2e9f2;
-      border-radius: 0px;
-      padding: 2rem 2rem;
-      transition: border 0.15s ease;
-      margin-bottom: 1.5rem;
+      border: 1px solid #e2eaf5;
+      border-radius: 24px;
+      padding: 2rem 2.2rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 6px 14px -8px rgba(27, 55, 84, 0.08);
     }
 
     .project-card:hover {
-      border: 1px solid #7f9aba;
-      background: #ffffff;
+      border-color: #9bb5d4;
+      box-shadow: 0 16px 28px -16px rgba(18, 62, 102, 0.16);
     }
 
     .project-card h3 {
       font-size: 1.9rem;
-      font-weight: 450;
-      color: #122c41;
-      margin-bottom: 0.6rem;
+      font-weight: 530;
+      color: #12334e;
+      margin-bottom: 0.75rem;
       letter-spacing: -0.01em;
     }
 
     .project-card p {
       font-size: 1.15rem;
-      color: #2d4057;
+      color: #2d4b68;
       max-width: 900px;
-      font-weight: 350;
+      font-weight: 360;
     }
 
-    /* footer – minimal separating line */
+    /* footer — elegant, with spacing and refined links */
     .footer-block {
       margin-top: 5rem;
-      padding: 2rem 0 1rem 0;
-      border-top: 1px solid #cbd7e6;
+      padding: 2.5rem 0 1rem 0;
+      border-top: 1px solid #cfdeef;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       font-size: 1.1rem;
-      color: #1d3851;
+      color: #1f405f;
     }
 
     .footer-links a {
-      color: #2f4b70;
+      color: #2d5780;
       text-decoration: none;
+      font-weight: 460;
+      margin: 0 0 0 2.2rem;
       border-bottom: 1px solid transparent;
-      margin: 0 0 0 2rem;
-      font-weight: 380;
-      transition: border-color 0.2s;
+      transition: border-color 0.2s, color 0.2s;
     }
 
     .footer-links a:hover {
-      border-bottom: 1px solid #7f9aba;
+      border-bottom: 1px solid #4070a0;
+      color: #0a2e4a;
     }
 
     .contact a {
-      color: #2f4b70;
+      color: #2d5780;
       text-decoration: none;
-      border-bottom: 1px solid #d0dceb;
+      font-weight: 460;
+      border-bottom: 1px solid #c6d9f0;
     }
     .contact a:hover {
-      border-bottom: 1px solid #1d3851;
+      border-bottom: 1px solid #1d3d5c;
     }
 
     .copyright {
       font-size: 0.95rem;
-      color: #5f738d;
-      font-weight: 330;
+      color: #617e9e;
+      font-weight: 380;
     }
 
-    /* typing cursor – subtle */
-    #typing::after {
-      content: '|';
-      animation: blink 1.1s step-end infinite;
-      margin-left: 3px;
-      font-weight: 300;
-      color: #6a7f9b;
-    }
-    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
-
-    /* responsiveness */
-    @media (max-width: 600px) {
-      h1 { font-size: 3rem; }
-      .typing-row { font-size: 1.3rem; }
-      .lead-description { font-size: 1.15rem; }
-      .footer-block { flex-direction: column; align-items: start; gap: 1rem; }
-      .footer-links a { margin-left: 0; margin-right: 1.5rem; }
+    /* responsive */
+    @media (max-width: 700px) {
+      h1 { font-size: 3.2rem; }
+      .typing-row { font-size: 1.5rem; }
+      .lead-description { font-size: 1.2rem; padding: 1.2rem; }
+      .footer-block { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .footer-links a { margin-left: 0; margin-right: 1.8rem; }
+      .section-title { font-size: 1.9rem; }
     }
 
-    /* remove all icons / emojis — you wanted no icon, so no decorative emojis at all */
-    /* i stripped every single emoji / symbol from titles and cards */
+    /* No unnecessary icons — pure typography */
+    /* subtle micro-interaction for email / links */
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- name + dynamic role line -->
+    <!-- strong name & live typing (developer focus) -->
     <h1>Vashudev Vishwas</h1>
     <div class="typing-row" id="typing"></div>
 
     <p class="lead-description">
-      WordPress plugin developer and PHP engineer with 3+ years building ERP systems,
-      WooCommerce customizations, Linux Ubuntu servers, Docker deployments, Nextcloud,
-      and cloud automation. Focus on maintainable code and quiet infrastructure.
+      WordPress plugin architect & cloud engineer with 3+ years of hands-on experience building ERP modules, WooCommerce extensions, Linux servers, Docker deployments, and self-hosted solutions. I write maintainable code and design quiet, resilient infrastructure.
     </p>
 
-    <!-- core expertise (section with no icons, only text) -->
+    <!-- core expertise – without any icon distractions, purely professional -->
     <div class="section-title">Core engineering</div>
     <div class="grid-expertise">
       <div class="expert-card">
         <h3>Plugin architecture</h3>
-        <p>Custom WordPress plugins – ERP modules (invoicing, inventory), SMS/WhatsApp automation, REST API endpoints, background jobs, role managers. Manual work reduced by 50%+.</p>
+        <p>Custom WordPress plugins – ERP (invoicing, inventory), SMS/WhatsApp automation, REST API, background jobs. Reduced manual work by 50%+ for clients.</p>
       </div>
       <div class="expert-card">
         <h3>WooCommerce deep-dive</h3>
-        <p>Dynamic pricing, conditional checkout, custom product templates, payment tweaks, cart rules. Conversion uplift 25%+ for clients.</p>
+        <p>Dynamic pricing, conditional checkout, custom product templates, payment/cart rules. Drove 25%+ conversion uplift and higher average order value.</p>
       </div>
       <div class="expert-card">
         <h3>Linux & server hardening</h3>
-        <p>Ubuntu 20.04/22.04 – Nginx/Apache, virtual hosts, SSL (Let's Encrypt), SSH hardening, fail2ban, automated backups, DNS, VM provisioning.</p>
+        <p>Ubuntu 20.04/22.04 – Nginx/Apache, virtual hosts, SSL (Let's Encrypt), SSH, fail2ban, automated backups, VM provisioning.</p>
       </div>
       <div class="expert-card">
         <h3>Docker & cloud deploy</h3>
-        <p>Multi-container WordPress/MySQL/phpMyAdmin with docker-compose, local-to-production workflows, AWS EC2, Linode deployment.</p>
+        <p>Multi-container WordPress/MySQL/phpMyAdmin with docker-compose, local → production workflows, AWS EC2, Linode deployment.</p>
       </div>
       <div class="expert-card">
         <h3>Nextcloud & self‑hosting</h3>
-        <p>Turnkey Nextcloud setup on Linux: user management, external storage, redis cache, Collabora, automated backups.</p>
+        <p>Turnkey Nextcloud on Linux: user management, external storage, redis, Collabora, automated backup pipelines.</p>
       </div>
       <div class="expert-card">
         <h3>Performance & scale</h3>
-        <p>Database optimisation, object cache (Redis), lazy loading, CDN, asset minification – 40%+ faster loads, 95+ pagespeed.</p>
+        <p>Database optimisation, object cache (Redis), lazy loading, CDN, minification – 40% faster loads, 95+ pagespeed scores.</p>
       </div>
       <div class="expert-card">
         <h3>ERP & automation</h3>
@@ -265,11 +275,11 @@
       </div>
       <div class="expert-card">
         <h3>Security hardening</h3>
-        <p>WordPress security: file permissions, xmlrpc disable, WP config hardening, auditing, cloud firewall rules, linux kernel.</p>
+        <p>WordPress security: file permissions, xmlrpc disable, WP config hardening, auditing, cloud firewall, Linux kernel tuning.</p>
       </div>
     </div>
 
-    <!-- projects (no icons) -->
+    <!-- flagship projects – clean, without icons, but structured -->
     <div class="section-title">Flagship projects</div>
     <div class="project-list">
       <div class="project-card">
@@ -298,15 +308,15 @@
       </div>
     </div>
 
-    <!-- footer (no icon except email safe) -->
+    <!-- footer with subtle presence -->
     <footer class="footer-block">
       <div class="contact">
         <a href="mailto:vashuvishwas2023@gmail.com">vashuvishwas2023@gmail.com</a>
       </div>
       <div class="footer-links">
-        <a href="https://profiles.wordpress.org/vashudevvishwas/" target="_blank" rel="noopener">wordpress.org</a>
-        <a href="#" target="_blank">github</a>
-        <a href="#" target="_blank">linkedin</a>
+        <a href="https://profiles.wordpress.org/vashudevvishwas/" target="_blank" rel="noopener">WordPress profile</a>
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">LinkedIn</a>
       </div>
       <div class="copyright">
         © 2026 Vashudev Vishwas — linux · cloud · plugins
@@ -314,7 +324,7 @@
     </footer>
   </div>
 
-  <!-- typing script – clean roles, no icons -->
+  <!-- professional typing effect – no icons, only roles -->
   <script>
     (function() {
       const roles = [
@@ -342,7 +352,7 @@
 
         if (j === roles[i].length) {
           isDeleting = true;
-          setTimeout(type, 1300);
+          setTimeout(type, 1400);
           return;
         }
         if (isDeleting && j === 0) {
@@ -350,13 +360,13 @@
           i = (i + 1) % roles.length;
         }
 
-        setTimeout(type, isDeleting ? 50 : 85);
+        setTimeout(type, isDeleting ? 45 : 80);
       }
       type();
     })();
   </script>
 
-  <!-- micro structured data (invisible) -->
+  <!-- structured data (hidden) -->
   <div style="display: none;" itemscope itemtype="https://schema.org/Person">
     <span itemprop="name">Vashudev Vishwas</span>
     <span itemprop="jobTitle">WordPress Plugin Developer & Cloud Engineer</span>
